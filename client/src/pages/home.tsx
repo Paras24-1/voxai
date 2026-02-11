@@ -39,7 +39,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 
-const WHATSAPP_DEMO = "wa.me/XXXXXXXXXX?text=Hi%20I%20want%20to%20test%20Vox%20AI";
+const WHATSAPP_DEMO = "wa.me/12569792181?text=Hi%20I%20want%20to%20test%20Vox%20AI";
 
 function useCountUp(target: number, start: boolean, durationMs = 900) {
   const [value, setValue] = useState(0);
@@ -221,7 +221,7 @@ function WhatsappMock() {
         text: "Yes. I can qualify you and book the next available slot. What’s your preferred clinic location?",
         t: "10:14",
       },
-      { from: "lead", text: "Dubai Marina. Budget is flexible.", t: "10:15" },
+      { from: "lead", text: "Marina. Budget is flexible.", t: "10:15" },
       {
         from: "ai",
         text: "Perfect. We have openings tomorrow 4:30pm or 6:00pm. Want me to lock one in?",
@@ -248,7 +248,7 @@ function WhatsappMock() {
           </div>
           <div>
             <div className="text-sm font-medium" data-testid="text-chat-title">
-              WhatsApp • Vox AI Agent
+              Vox AI Agent
             </div>
             <div className="text-xs text-muted-foreground" data-testid="text-chat-subtitle">
               Context-aware • Multi-language • 24/7
@@ -1143,44 +1143,55 @@ export default function Home() {
               id="pricing"
             />
 
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
-              <PricingCard
-                testId="card-pricing-starter"
-                name="Starter"
-                price="$1,200"
-                setup="$2,500"
-                items={[
-                  "Lead qualification flows",
-                  "Basic integrations (Sheets + webhooks)",
-                  "WhatsApp conversation templates",
-                  "Weekly optimization",
-                ]}
-              />
-              <PricingCard
-                testId="card-pricing-growth"
-                name="Growth"
-                price="$2,900"
-                setup="$5,000"
-                items={[
-                  "Advanced qualification + routing",
-                  "Calendar automation + reminders",
-                  "CRM integration (HubSpot/GHL)",
-                  "Analytics dashboard (conversation + ROI)",
-                ]}
-                highlight
-              />
-              <PricingCard
-                testId="card-pricing-enterprise"
-                name="Enterprise"
-                price="Custom"
-                setup="Custom"
-                items={[
-                  "RBAC + compliance requirements",
-                  "Custom APIs + secure workflows",
-                  "Multi-department routing",
-                  "SLA + monitoring",
-                ]}
-              />
+            <div className="mt-10 flex justify-center">
+              <div
+                className="vox-glass vox-noise vox-glow relative max-w-lg w-full rounded-2xl p-8"
+                data-testid="card-pricing-custom"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <div className="font-display text-2xl font-semibold" data-testid="text-pricing-custom-name">
+                    Custom AI Solutions
+                  </div>
+                  <Badge className="border-white/10 bg-white/5 text-muted-foreground">
+                    Enterprise
+                  </Badge>
+                </div>
+                <div className="mt-6">
+                  <div className="text-4xl font-semibold tracking-tight">
+                    Custom
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    Tailored AI architecture designed specifically for your business workflows, 
+                    deep integrations, and custom logic requirements.
+                  </p>
+                </div>
+                <ul className="mt-8 space-y-3">
+                  {[
+                    "Custom conversation logic & flows",
+                    "Deep CRM & API integrations",
+                    "Official WhatsApp API setup",
+                    "Full testing & optimization",
+                    "Ongoing monitoring & support",
+                  ].map((it, i) => (
+                    <li key={i} className="flex gap-3 text-sm">
+                      <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
+                      <span className="text-foreground/90">{it}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-10">
+                  <Button
+                    className="w-full h-12 text-lg bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white hover:opacity-95"
+                    asChild
+                    data-testid="button-pricing-custom"
+                  >
+                    <a href="https://calendly.com/voxai4278/30min" target="_blank" rel="noreferrer">
+                      Book a Strategy Call
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
 
             <div className="mt-6 vox-glass vox-noise rounded-2xl p-6" data-testid="card-roi">
@@ -1353,7 +1364,7 @@ export default function Home() {
           <div className="vox-container">
             <SectionHeading
               eyebrow="About VOX AI"
-              title="Dubai & India — building scalable business AI systems"
+              title="Building scalable business AI systems"
               subtitle="Innovation-driven AI automation for teams that demand premium experiences and measurable ROI."
               id="about"
             />
@@ -1499,7 +1510,7 @@ export default function Home() {
                       {
                         icon: <Globe className="h-5 w-5" />,
                         label: "Locations",
-                        value: "Dubai • India",
+                        value: "India",
                       },
                       {
                         icon: <BadgeCheck className="h-5 w-5" />,
