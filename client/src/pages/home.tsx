@@ -218,19 +218,19 @@ function WhatsappMock() {
       { from: "lead", text: "Hi, do you handle dental bookings?", t: "10:14" },
       {
         from: "ai",
-        text: "Yes. I can qualify you and book the next available slot. What’s your preferred clinic location?",
+        text: "Yes. I can qualify you and book the next available slot. ",
         t: "10:14",
       },
-      { from: "lead", text: "Marina. Budget is flexible.", t: "10:15" },
+      { from: "lead", text: "Can you handle real estate leads ?", t: "10:15" },
       {
         from: "ai",
-        text: "Perfect. We have openings tomorrow 4:30pm or 6:00pm. Want me to lock one in?",
+        text: "Yes I can instantly book viewings, sends reminders, handle follow-ups, and route hot prospects directly to your sales agent.",
         t: "10:15",
       },
-      { from: "lead", text: "4:30pm.", t: "10:15" },
+      { from: "lead", text: "Is there anything that you can't do ? ", t: "10:15" },
       {
         from: "ai",
-        text: "Booked. You’ll receive a reminder 2 hours before. Anything else I can help with today?",
+        text: "We can automate conversations, qualification, booking, and follow-ups — but we don’t replace human relationships or final deal negotiations ,The goal is to handle the repetitive work so your team focuses on closing.",
         t: "10:16",
       },
     ],
@@ -469,14 +469,15 @@ function Navbar() {
             </div>
 
             <div className="flex items-center gap-2">
-              <Button
-                variant="secondary"
-                className="hidden border border-white/10 bg-white/5 text-foreground hover:bg-white/10 md:inline-flex"
-                data-testid="button-book-call"
-              >
-                Book Strategy Call
-                <ChevronRight className="ml-1.5 h-4 w-4" />
-              </Button>
+            <Button
+  variant="secondary"
+  className="hidden border border-white/10 bg-white/5 text-foreground hover:bg-white/10 md:inline-flex"
+  data-testid="button-book-call"
+  onClick={() => window.open("https://calendly.com/voxai4278/30min", "_blank")}
+>
+  Book Strategy Call
+  <ChevronRight className="ml-1.5 h-4 w-4" />
+</Button>
               <Button
                 className="bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white hover:opacity-95"
                 asChild
@@ -621,13 +622,7 @@ export default function Home() {
                   transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
                   data-testid="card-floating-1"
                 >
-                  <div className="flex items-center gap-2 text-foreground">
-                    <LineChart className="h-4 w-4 text-[hsl(var(--primary))]" />
-                    ROI Tracking
-                  </div>
-                  <div className="mt-2 text-xs leading-relaxed">
-                    Live conversion metrics and lead source analytics.
-                  </div>
+                
                 </motion.div>
 
                 <motion.div
@@ -636,13 +631,7 @@ export default function Home() {
                   transition={{ duration: 7.2, repeat: Infinity, ease: "easeInOut" }}
                   data-testid="card-floating-2"
                 >
-                  <div className="flex items-center gap-2 text-foreground">
-                    <CircuitBoard className="h-4 w-4 text-[hsl(var(--accent))]" />
-                    Context Memory
-                  </div>
-                  <div className="mt-2 text-xs leading-relaxed">
-                    Understands intent, history, and objections.
-                  </div>
+                  
                 </motion.div>
 
                 <WhatsappMock />
@@ -822,13 +811,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-5 flex flex-col gap-2 sm:flex-row">
-                  <Button
-                    className="bg-white/5 hover:bg-white/10"
-                    data-testid="button-process-download"
-                  >
-                    View AI tech stack
-                    <ChevronRight className="ml-1.5 h-4 w-4" />
-                  </Button>
+                  
                   <Button
                     className="bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white hover:opacity-95"
                     asChild
@@ -1090,45 +1073,35 @@ export default function Home() {
               <Card className="vox-glass vox-noise rounded-2xl p-6" data-testid="card-media-demo">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <FileVideo2 className="h-4 w-4 text-[hsl(var(--accent))]" />
-                  Media
+                  N8N
                 </div>
                 <div className="font-display mt-2 text-lg font-semibold" data-testid="text-media-title">
-                  Product demo video (placeholder)
+                  How The Worklow in the Backend Will Look Like 
                 </div>
-                <div className="mt-4 aspect-video rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-black/20" data-testid="video-placeholder-1" />
+                <img
+  src="/n8n-diagram.png"
+  alt="n8n backend workflow"
+  className="mt-4 aspect-video w-full rounded-xl border border-white/10 object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+  data-testid="image-n8n-workflow"
+/>
                 <div className="mt-4 grid grid-cols-3 gap-3">
-                  {["Dashboard", "Conversation", "Automation"].map((t, i) => (
-                    <div key={i} className="h-20 rounded-xl border border-white/10 bg-white/5" data-testid={`img-screenshot-${i}`} />
-                  ))}
                 </div>
               </Card>
 
               <Card className="vox-glass vox-noise rounded-2xl p-6" data-testid="card-media-testimonials">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Users className="h-4 w-4 text-[hsl(var(--primary))]" />
-                  Social proof
+                  Google Sheet
                 </div>
                 <div className="font-display mt-2 text-lg font-semibold" data-testid="text-testimonials-title">
-                  Client testimonial video (placeholder)
+                  Very Basic Google Sheet Lead CRM
                 </div>
-                <div className="mt-4 aspect-video rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-black/20" data-testid="video-placeholder-2" />
-                <div className="mt-4 grid gap-3">
-                  {[
-                    {
-                      q: "We cut response time from hours to seconds — and bookings jumped.",
-                      a: "Clinic Ops Manager",
-                    },
-                    {
-                      q: "The agent handles objections better than our old scripts.",
-                      a: "E-commerce Founder",
-                    },
-                  ].map((t, i) => (
-                    <div key={i} className="rounded-xl border border-white/10 bg-white/5 p-4" data-testid={`card-quote-${i}`}>
-                      <div className="text-sm" data-testid={`text-quote-${i}`}>“{t.q}”</div>
-                      <div className="mt-2 text-xs text-muted-foreground" data-testid={`text-quote-author-${i}`}>{t.a}</div>
-                    </div>
-                  ))}
-                </div>
+                <img
+  src="/google-sheet-crm.png"
+  alt="Google Sheet lead CRM"
+  className="mt-4 aspect-video w-full rounded-xl border border-white/10 object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+  data-testid="image-google-sheet-crm"
+/>
               </Card>
             </div>
           </div>
@@ -1194,32 +1167,6 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-6 vox-glass vox-noise rounded-2xl p-6" data-testid="card-roi">
-              <div className="flex items-start justify-between gap-6 flex-col md:flex-row">
-                <div>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-muted-foreground" data-testid="badge-roi">
-                    <PieChart className="h-3.5 w-3.5 text-[hsl(var(--accent))]" />
-                    ROI calculator (placeholder)
-                  </div>
-                  <div className="font-display mt-3 text-xl font-semibold" data-testid="text-roi-title">
-                    Estimate your impact
-                  </div>
-                  <div className="mt-1 text-sm text-muted-foreground" data-testid="text-roi-body">
-                    A quick preview of how response speed and automation can move revenue. (Interactive version can be added.)
-                  </div>
-                </div>
-                <div className="grid w-full max-w-md grid-cols-2 gap-3">
-                  {["Monthly inbound leads", "Avg order value", "Close rate", "Team hours saved"].map((t, i) => (
-                    <div key={i} className="rounded-xl border border-white/10 bg-white/5 p-3" data-testid={`card-roi-input-${i}`}>
-                      <div className="text-xs text-muted-foreground" data-testid={`text-roi-label-${i}`}>{t}</div>
-                      <div className="mt-1 font-mono text-sm text-foreground/90" data-testid={`text-roi-value-${i}`}>
-                        —
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -1232,36 +1179,58 @@ export default function Home() {
               id="tech"
             />
 
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
-              {[{
-                icon: <ShieldCheck className="h-5 w-5" />,
-                title: "WhatsApp Official API",
-                body: "We use the official WhatsApp Business API for reliability, delivery, and compliance — designed for real business workflows.",
-              }, {
-                icon: <CircuitBoard className="h-5 w-5" />,
-                title: "AI Logic + Prompt Engineering",
-                body: "We design prompts, system rules, and conversation memory to keep responses accurate, on-brand, and conversion-focused.",
-              }, {
-                icon: <PlugZap className="h-5 w-5" />,
-                title: "Automation with n8n",
-                body: "We wire automations for tagging, CRM updates, calendar booking, and routing. Diagram placeholder included for your deck.",
-              }].map((b, i) => (
-                <Card key={i} className="vox-glass vox-noise rounded-2xl p-6" data-testid={`card-tech-${i}`}>
-                  <div className="flex items-start gap-3">
-                    <div className="rounded-xl border border-white/10 bg-white/5 p-2.5 text-[hsl(var(--accent))]">
-                      {b.icon}
-                    </div>
-                    <div>
-                      <div className="font-display text-lg font-semibold" data-testid={`text-tech-title-${i}`}>{b.title}</div>
-                      <div className="mt-1 text-sm text-muted-foreground" data-testid={`text-tech-body-${i}`}>{b.body}</div>
-                    </div>
-                  </div>
-                  {i === 2 ? (
-                    <div className="mt-4 h-32 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-black/20" data-testid="diagram-n8n-placeholder" />
-                  ) : null}
-                </Card>
-              ))}
-            </div>
+<div className="mt-10 grid gap-5 lg:grid-cols-3">
+  {[{
+    icon: <ShieldCheck className="h-5 w-5" />,
+    title: "WhatsApp Official API",
+    body: "We use the official WhatsApp Business API for reliability, delivery, and compliance — designed for real business workflows.",
+  }, {
+    icon: <CircuitBoard className="h-5 w-5" />,
+    title: "AI Logic + Prompt Engineering",
+    body: "We design prompts, system rules, and conversation memory to keep responses accurate, on-brand, and conversion-focused.",
+  }, {
+    icon: <PlugZap className="h-5 w-5" />,
+    title: "Automation with n8n",
+    body: "We wire automations for tagging, CRM updates, calendar booking, and routing.",
+  }].map((b, i) => (
+    <Card
+      key={i}
+      className="vox-glass vox-noise rounded-2xl p-6"
+      data-testid={`card-tech-${i}`}
+    >
+      <div className="flex items-start gap-3">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-2.5 text-[hsl(var(--accent))]">
+          {b.icon}
+        </div>
+
+        <div>
+          <div
+            className="font-display text-lg font-semibold"
+            data-testid={`text-tech-title-${i}`}
+          >
+            {b.title}
+          </div>
+
+          <div
+            className="mt-1 text-sm text-muted-foreground"
+            data-testid={`text-tech-body-${i}`}
+          >
+            {b.body}
+          </div>
+        </div>
+      </div>
+
+      {/* Image only for 3rd card */}
+      {i === 2 && (
+        <img
+          src="/n8n-diagram.png"
+          alt="n8n automation workflow"
+          className="mt-4 w-full rounded-xl border border-white/10 shadow-lg transition-transform duration-300 hover:scale-105"
+        />
+      )}
+    </Card>
+  ))}
+</div>
           </div>
         </section>
 
@@ -1303,13 +1272,37 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mt-4 rounded-xl border border-white/10 bg-black/20 p-4" data-testid={`card-case-metrics-${i}`}>
-                    <div className="grid grid-cols-3 gap-3 text-xs text-muted-foreground">
-                      {["Speed", "Quality", "ROI"].map((t, j) => (
-                        <div key={j} className="rounded-lg border border-white/10 bg-white/5 p-2 text-center" data-testid={`text-case-metric-${i}-${j}`}>
-                          {t}
-                        </div>
-                      ))}
-                    </div>
+<div className="grid grid-cols-3 gap-3 text-center">
+  {[
+    [
+      { label: "Speed", value: "3x Faster Bookings" },
+      { label: "Quality", value: "92% Show Rate" },
+      { label: "ROI", value: "+41% Revenue" },
+    ],
+    [
+      { label: "Speed", value: "< 60s Lead Response" },
+      { label: "Quality", value: "Hot Lead Filtering" },
+      { label: "ROI", value: "+27% Closings" },
+    ],
+    [
+      { label: "Speed", value: "Instant Recovery" },
+      { label: "Quality", value: "Smart Objection AI" },
+      { label: "ROI", value: "+18% AOV" },
+    ],
+  ][i].map((metric, j) => (
+    <div
+      key={j}
+      className="rounded-lg border border-white/10 bg-white/5 p-3"
+    >
+      <div className="text-xs text-muted-foreground">
+        {metric.label}
+      </div>
+      <div className="mt-1 font-semibold text-sm text-white">
+        {metric.value}
+      </div>
+    </div>
+  ))}
+</div>
                   </div>
                 </Card>
               ))}
@@ -1442,13 +1435,16 @@ export default function Home() {
                   </p>
 
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                    <Button
-                      className="h-11 bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white hover:opacity-95"
-                      data-testid="button-final-book"
-                    >
-                      Book Strategy Call
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                  <Button
+  variant="secondary"
+  className="hidden border border-white/10 bg-white/5 text-foreground hover:bg-white/10 md:inline-flex"
+  data-testid="button-book-call"
+  onClick={() => window.open("https://calendly.com/voxai4278/30min", "_blank")}
+>
+  Book Strategy Call
+  <ChevronRight className="ml-1.5 h-4 w-4" />
+</Button>
+
                     <Button
                       variant="secondary"
                       className="h-11 border border-white/10 bg-white/5 text-foreground hover:bg-white/10"
@@ -1477,40 +1473,36 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <div className="rounded-2xl border border-white/10 bg-black/25 p-5">
-                    <div className="font-display text-lg font-semibold" data-testid="text-contact-form-title">
-                      Contact form
-                    </div>
-                    <p className="mt-1 text-sm text-muted-foreground" data-testid="text-contact-form-subtitle">
-                      Leave your details — we’ll reply with a strategy plan.
-                    </p>
+                <div className="rounded-2xl border border-white/10 bg-black/25 p-8 text-center">
+  <div className="font-display text-lg font-semibold mb-3">
+    Book a Strategy Call
+  </div>
 
-                    <div className="mt-5 grid gap-3">
-                      <Input placeholder="Full name" data-testid="input-name" />
-                      <Input placeholder="Work email" type="email" data-testid="input-email" />
-                      <Input placeholder="Company / Industry" data-testid="input-company" />
-                      <Textarea placeholder="What do you want Vox AI to automate?" className="min-h-28" data-testid="input-message" />
-                      <Button
-                        className="bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white hover:opacity-95"
-                        data-testid="button-submit"
-                        onClick={() => {
-                          // Frontend-only mock submission
-                          // eslint-disable-next-line no-alert
-                          alert("Thanks! This is a prototype form — we’ll connect real email delivery when you’re ready.");
-                        }}
-                      >
-                        Send request
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
+  <p className="text-sm text-muted-foreground mb-6">
+    Let’s discuss how Vox AI can automate and scale your business.
+  </p>
+
+  <a 
+    href="https://calendly.com/voxai4278/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      className="bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white hover:opacity-95"
+      data-testid="button-book-meeting"
+    >
+      Book 30-Min Meeting
+      <ArrowRight className="ml-2 h-4 w-4" />
+    </Button>
+  </a>
+</div>
 
                   <div className="mt-5 grid gap-3 sm:grid-cols-2">
                     {[
                       {
                         icon: <Globe className="h-5 w-5" />,
-                        label: "Locations",
-                        value: "India",
+                        label: "Location",
+                        value: "Ludhiana,India",
                       },
                       {
                         icon: <BadgeCheck className="h-5 w-5" />,
