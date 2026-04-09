@@ -39,7 +39,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 
-const WHATSAPP_DEMO = "wa.me/12569792181?text=Hi%20I%20want%20to%20test%20Vox%20AI";
+const WHATSAPP_DEMO = "wa.me/917889019602?text=Hi%20I%20want%20to%20test%20Vox%20AI";
 
 function useCountUp(target: number, start: boolean, durationMs = 900) {
   const [value, setValue] = useState(0);
@@ -1097,7 +1097,7 @@ export default function Home() {
                   Very Basic Google Sheet Lead CRM
                 </div>
                 <img
-  src="/google-sheet-crm.png"
+  src="/public/whatsapp-dashboard.png"
   alt="Google Sheet lead CRM"
   className="mt-4 aspect-video w-full rounded-xl border border-white/10 object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
   data-testid="image-google-sheet-crm"
