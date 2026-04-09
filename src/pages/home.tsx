@@ -1097,8 +1097,8 @@ export default function Home() {
                   Very Basic Google Sheet Lead CRM
                 </div>
                 <img
-  src="/public/whatsapp-dashboard.png"
-  alt="Google Sheet lead CRM"
+  src="whatsapp-dashboard.png"
+  alt="Whatsapp Dashboard"
   className="mt-4 aspect-video w-full rounded-xl border border-white/10 object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
   data-testid="image-google-sheet-crm"
 />
