@@ -1094,11 +1094,11 @@ export default function Home() {
                   Google Sheet
                 </div>
                 <div className="font-display mt-2 text-lg font-semibold" data-testid="text-testimonials-title">
-                  Very Basic Google Sheet Lead CRM
+                  Whatsapp Dashbaord With Integerated CRM
                 </div>
                 <img
   src="whatsapp-dashboard.png"
-  alt="Whatsapp Dashboard"
+  alt="Whatsapp Dashbaord"
   className="mt-4 aspect-video w-full rounded-xl border border-white/10 object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
   data-testid="image-google-sheet-crm"
 />
