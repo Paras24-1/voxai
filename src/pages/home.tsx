@@ -1091,7 +1091,7 @@ export default function Home() {
               <Card className="vox-glass vox-noise rounded-2xl p-6" data-testid="card-media-testimonials">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Users className="h-4 w-4 text-[hsl(var(--primary))]" />
-                  Google Sheet
+                  Dashboard With CRM
                 </div>
                 <div className="font-display mt-2 text-lg font-semibold" data-testid="text-testimonials-title">
                   Whatsapp Dashbaord With Integerated CRM
